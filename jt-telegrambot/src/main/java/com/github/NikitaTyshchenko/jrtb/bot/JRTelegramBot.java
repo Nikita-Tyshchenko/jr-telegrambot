@@ -2,6 +2,7 @@ package com.github.NikitaTyshchenko.jrtb.bot;
 
 import com.github.NikitaTyshchenko.jrtb.command.CommandContainer;
 import com.github.NikitaTyshchenko.jrtb.service.SendBotMessageServiceImpl;
+import com.github.NikitaTyshchenko.jrtb.service.TelegramUserService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -23,8 +24,8 @@ public class JRTelegramBot extends TelegramLongPollingBot {
 
     private final CommandContainer commandContainer;
 
-    public JRTelegramBot(){
-        this.commandContainer = new CommandContainer(new SendBotMessageServiceImpl(this));
+    public JRTelegramBot(TelegramUserService telegramUserService){
+        this.commandContainer = new CommandContainer(new SendBotMessageServiceImpl(this), telegramUserService);
     }
 
     @Override
