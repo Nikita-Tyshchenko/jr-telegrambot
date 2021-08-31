@@ -1,4 +1,4 @@
-package com.github.NikitaTyshchenko.jrtb;
+package com.github.NikitaTyshchenko.jrtb.service;
 
 
 import com.github.NikitaTyshchenko.jrtb.bot.JRTelegramBot;

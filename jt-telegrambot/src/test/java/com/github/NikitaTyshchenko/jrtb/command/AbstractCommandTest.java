@@ -1,9 +1,10 @@
-package com.github.NikitaTyshchenko.jrtb;
+package com.github.NikitaTyshchenko.jrtb.command;
 
 import com.github.NikitaTyshchenko.jrtb.bot.JRTelegramBot;
 import com.github.NikitaTyshchenko.jrtb.command.Command;
 import com.github.NikitaTyshchenko.jrtb.service.SendBotMessageService;
 import com.github.NikitaTyshchenko.jrtb.service.SendBotMessageServiceImpl;
+import com.github.NikitaTyshchenko.jrtb.service.TelegramUserService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -15,6 +16,7 @@ abstract class AbstractCommandTest {
 
     protected JRTelegramBot jrTelegramBot = Mockito.mock(JRTelegramBot.class);
     protected SendBotMessageService sendBotMessageService = new SendBotMessageServiceImpl(jrTelegramBot);
+    protected TelegramUserService telegramUserService = Mockito.mock(TelegramUserService.class);
 
     abstract String getCommandName();
 

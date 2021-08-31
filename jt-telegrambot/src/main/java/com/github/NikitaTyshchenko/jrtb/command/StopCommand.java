@@ -25,5 +25,4 @@ public class StopCommand implements Command{
                     telegramUserService.save(it);
                 });
     }
-    }
 }
