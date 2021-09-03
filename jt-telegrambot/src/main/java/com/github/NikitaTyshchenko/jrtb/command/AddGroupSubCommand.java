@@ -33,6 +33,7 @@ public class AddGroupSubCommand implements Command{
     public void execute(Update update) {
         if(getMessage(update).equalsIgnoreCase(ADD_GROUP_SUB.getCommandName())){
             sendGroupIdList(getChatId(update).toString());
+            return;
         }
         String groupId = getMessage(update).split(SPACE)[1];
         Long chatId = getChatId(update);
