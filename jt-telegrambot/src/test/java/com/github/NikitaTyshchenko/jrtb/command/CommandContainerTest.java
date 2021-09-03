@@ -4,6 +4,8 @@ import com.github.NikitaTyshchenko.jrtb.command.Command;
 import com.github.NikitaTyshchenko.jrtb.command.CommandContainer;
 import com.github.NikitaTyshchenko.jrtb.command.CommandName;
 import com.github.NikitaTyshchenko.jrtb.command.UnknownCommand;
+import com.github.NikitaTyshchenko.jrtb.javarushclient.JRGroupClient;
+import com.github.NikitaTyshchenko.jrtb.service.GroupSubService;
 import com.github.NikitaTyshchenko.jrtb.service.SendBotMessageService;
 import com.github.NikitaTyshchenko.jrtb.service.TelegramUserService;
 import org.junit.jupiter.api.Assertions;
@@ -23,7 +25,9 @@ public class CommandContainerTest {
     public void init(){
         SendBotMessageService sendBotMessageService = Mockito.mock(SendBotMessageService.class);
         TelegramUserService telegramUserService = Mockito.mock(TelegramUserService.class);
-        commandContainer = new CommandContainer(sendBotMessageService, telegramUserService);
+        JRGroupClient jrGroupClient = Mockito.mock(JRGroupClient.class);
+        GroupSubService groupSubService = Mockito.mock(GroupSubService.class);
+        commandContainer = new CommandContainer(sendBotMessageService, telegramUserService, jrGroupClient, groupSubService);
     }
 
     @Test
