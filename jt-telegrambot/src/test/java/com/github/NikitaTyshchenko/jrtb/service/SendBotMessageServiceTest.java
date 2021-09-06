@@ -34,7 +34,7 @@ public class SendBotMessageServiceTest {
         sendMessage.setChatId(chatId);
         sendMessage.enableHtml(true);
 
-        sendBotMessageService.sendMessage(chatId, message);
+        sendBotMessageService.sendMessage(Long.valueOf(chatId), message);
 
         Mockito.verify(jrTelegramBot).execute(sendMessage);
     }

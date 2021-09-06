@@ -1,4 +1,4 @@
-package com.github.NikitaTyshchenko.jrtb.javarushclient.dto;
+package com.github.NikitaTyshchenko.jrtb.javarushclient.dto.group;
 
 public enum MeGroupInfoStatus {
     UNKNOWN,

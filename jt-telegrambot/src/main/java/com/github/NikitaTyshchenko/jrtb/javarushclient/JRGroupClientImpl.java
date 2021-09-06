@@ -1,9 +1,9 @@
 package com.github.NikitaTyshchenko.jrtb.javarushclient;
 
-import com.github.NikitaTyshchenko.jrtb.javarushclient.dto.GroupDiscussionInfo;
-import com.github.NikitaTyshchenko.jrtb.javarushclient.dto.GroupInfo;
-import com.github.NikitaTyshchenko.jrtb.javarushclient.dto.GroupRequestArgs;
-import com.github.NikitaTyshchenko.jrtb.javarushclient.dto.GroupsCountRequestArgs;
+import com.github.NikitaTyshchenko.jrtb.javarushclient.dto.group.GroupDiscussionInfo;
+import com.github.NikitaTyshchenko.jrtb.javarushclient.dto.group.GroupInfo;
+import com.github.NikitaTyshchenko.jrtb.javarushclient.dto.group.GroupRequestArgs;
+import com.github.NikitaTyshchenko.jrtb.javarushclient.dto.group.GroupsCountRequestArgs;
 import kong.unirest.GenericType;
 import kong.unirest.Unirest;
 import org.springframework.beans.factory.annotation.Value;

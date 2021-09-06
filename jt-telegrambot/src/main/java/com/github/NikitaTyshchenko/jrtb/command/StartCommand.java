@@ -33,6 +33,6 @@ public class StartCommand implements Command{
                     telegramUserService.save(telegramUser);
                 });
 
-        sendBotMessageService.sendMessage(chatId, START_MESSAGE);
+        sendBotMessageService.sendMessage(Long.valueOf(chatId), START_MESSAGE);
     }
 }

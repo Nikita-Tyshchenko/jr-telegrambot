@@ -25,11 +25,11 @@ public class GroupSubListCommand implements Command{
     public void execute(Update update) {
         TelegramUser telegramUser = telegramUserService.findByChatId(getChatId(update).toString()).orElseThrow(NotFoundException::new);
 
-        String message = "Я нашел все подписки на группы \n\n";
+        String message = "Я нашел все подписки на группы: \n\n";
         String collectedGroups = telegramUser.getGroupSubs().stream()
                 .map(sub -> "Группа: " + sub.getTitle() + " , ID = " + sub.getId() + " \n")
                 .collect(Collectors.joining());
 
-        sendBotMessageService.sendMessage(telegramUser.getChatId(), message + collectedGroups);
+        sendBotMessageService.sendMessage(Long.valueOf(telegramUser.getChatId()), message + collectedGroups);
     }
 }

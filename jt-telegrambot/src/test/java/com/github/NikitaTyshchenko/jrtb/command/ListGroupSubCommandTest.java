@@ -50,14 +50,14 @@ public class ListGroupSubCommandTest {
 
         String collectedGroups = "Я нашел все подписки на группы: \n\n" +
                 telegramUser.getGroupSubs().stream()
-                        .map(it -> "Группа: " + it.getTitle() + " , ID = " + it.getId() + " \n")
+                        .map(group -> "Группа: " + group.getTitle() + " , ID = " + group.getId() + " \n")
                         .collect(Collectors.joining());
 
         //when
         command.execute(update);
 
         //then
-        Mockito.verify(sendBotMessageService).sendMessage(telegramUser.getChatId(), collectedGroups);
+        Mockito.verify(sendBotMessageService).sendMessage(Long.valueOf(telegramUser.getChatId()), collectedGroups);
     }
 
     private GroupSub populateGroupSub(Integer id, String title) {

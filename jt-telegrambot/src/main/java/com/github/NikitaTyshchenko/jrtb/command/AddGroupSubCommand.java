@@ -1,8 +1,8 @@
 package com.github.NikitaTyshchenko.jrtb.command;
 
 import com.github.NikitaTyshchenko.jrtb.javarushclient.JRGroupClient;
-import com.github.NikitaTyshchenko.jrtb.javarushclient.dto.GroupDiscussionInfo;
-import com.github.NikitaTyshchenko.jrtb.javarushclient.dto.GroupRequestArgs;
+import com.github.NikitaTyshchenko.jrtb.javarushclient.dto.group.GroupDiscussionInfo;
+import com.github.NikitaTyshchenko.jrtb.javarushclient.dto.group.GroupRequestArgs;
 import com.github.NikitaTyshchenko.jrtb.repository.entity.GroupSub;
 import com.github.NikitaTyshchenko.jrtb.service.GroupSubService;
 import com.github.NikitaTyshchenko.jrtb.service.SendBotMessageService;
@@ -43,7 +43,7 @@ public class AddGroupSubCommand implements Command{
                 sendGroupNotFound(chatId, groupId);
             }
             GroupSub savedGroupSub = groupSubService.save(chatId.toString(), groupById);
-            sendBotMessageService.sendMessage(chatId.toString(), "Подписался на группу " + savedGroupSub.getTitle());
+            sendBotMessageService.sendMessage(chatId, "Подписался на группу " + savedGroupSub.getTitle());
         } else {
             sendGroupNotFound(chatId, groupId);
         }
@@ -51,7 +51,7 @@ public class AddGroupSubCommand implements Command{
 
     private void sendGroupNotFound(Long chatId, String groupId) {
         String groupNotFoundMessage = "Нет группы с ID = \"%s\"";
-        sendBotMessageService.sendMessage(chatId.toString(), String.format(groupNotFoundMessage, groupId));
+        sendBotMessageService.sendMessage(chatId, String.format(groupNotFoundMessage, groupId));
     }
 
     private void sendGroupIdList(String chatId){
@@ -65,6 +65,6 @@ public class AddGroupSubCommand implements Command{
                 "имя группы - ID группы \n\n" +
                 "%s";
 
-        sendBotMessageService.sendMessage(chatId.toString(), String.format(message, groupIds));
+        sendBotMessageService.sendMessage(Long.valueOf(chatId), String.format(message, groupIds));
     }
 }

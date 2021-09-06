@@ -1,6 +1,6 @@
 package com.github.NikitaTyshchenko.jrtb.service;
 
-import com.github.NikitaTyshchenko.jrtb.javarushclient.dto.GroupDiscussionInfo;
+import com.github.NikitaTyshchenko.jrtb.javarushclient.dto.group.GroupDiscussionInfo;
 import com.github.NikitaTyshchenko.jrtb.repository.GroupSubRepository;
 import com.github.NikitaTyshchenko.jrtb.repository.entity.GroupSub;
 import com.github.NikitaTyshchenko.jrtb.repository.entity.TelegramUser;
