@@ -12,4 +12,8 @@ public interface TelegramUserService {
     List<TelegramUser> retrieveAllActiveUsers();
 
     Optional<TelegramUser> findByChatId(String chatId);
+
+    List<TelegramUser> findAllActiveUsers();
+
+    List<TelegramUser> findAllInActiveUsers();
 }

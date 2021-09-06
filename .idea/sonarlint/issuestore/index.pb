@@ -9,8 +9,6 @@ I
 Zjt-telegrambot/src/test/java/com/github/NikitaTyshchenko/jrtb/command/StopCommandTest.java,5\0\50c67bd74d0b310de25a4cd26f8beb151db9dfeb
 ç
 ]jt-telegrambot/src/test/java/com/github/NikitaTyshchenko/jrtb/command/UnknownCommandTest.java,b\6\b67b09bd3563746dad0ed076c8a34308cc7580a6
-î
-djt-telegrambot/src/main/java/com/github/NikitaTyshchenko/jrtb/repository/TelegramUserRepository.java,2\2\2257f8c5b521ce44ea35995c3cd523dad69c3096
 Ç
 Rjt-telegrambot/src/main/java/com/github/NikitaTyshchenko/jrtb/command/Command.java,a\4\a49659699389cb0088ffadb8f3974b6d73b7113e
 F
@@ -41,8 +39,6 @@ bjt-telegrambot/src/test/java/com/github/NikitaTyshchenko/jrtb/repository/GroupS
 fjt-telegrambot/src/test/java/com/github/NikitaTyshchenko/jrtb/repository/TelegramUserRepositoryIT.java,5\1\518c9fa87cee25cb77eb5fdf1fa751243236db0b
 ê
 `jt-telegrambot/src/main/java/com/github/NikitaTyshchenko/jrtb/repository/GroupSubRepository.java,b\e\be4059f9a977b32087b3f2bd46a3a90121af4ae6
-é
-^jt-telegrambot/src/main/java/com/github/NikitaTyshchenko/jrtb/service/TelegramUserService.java,0\b\0bc32c808124a13dbcba171e9a8847bde78b6678
 á
 Wjt-telegrambot/src/main/java/com/github/NikitaTyshchenko/jrtb/command/CommandUtils.java,d\7\d75cbda042b7d8adea4947a93003b14274d188d7
 Q
@@ -51,5 +47,3 @@ V
 &jt-telegrambot/docker-compose-test.yml,8\0\805c4f1e762417926745e4fbcdfe69ce0d25a365
 F
 jt-telegrambot/pom.xml,c\9\c97740e0faaa5144f1163f40e9a80ae242405789
-Ñ
-Tjt-telegrambot/src/main/java/com/github/NikitaTyshchenko/jrtb/bot/JRTelegramBot.java,3\1\31af3d364bb592a3a8c29059cd150ca531b5f48f
